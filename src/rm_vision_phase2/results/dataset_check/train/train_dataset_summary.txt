@@ -1,0 +1,15 @@
+split: train
+images: 20887
+labels: 20887
+empty_labels: 12
+missing_labels: 0
+missing_images: 0
+invalid_rows: 0
+class_0_red_1: 5897
+class_1_blue_1: 3991
+class_2_red_3: 7770
+class_3_blue_3: 7252
+class_4_red_4: 6789
+class_5_blue_4: 3518
+class_6_red_sentry: 6272
+class_7_blue_sentry: 5413

@@ -1,0 +1,26 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/Image
+      Name: Raw Image
+      Topic:
+        Depth: 5
+        Reliability Policy: Best Effort
+        Value: /camera/image_raw
+      Enabled: true
+    - Class: rviz_default_plugins/Image
+      Name: Detections
+      Topic:
+        Depth: 5
+        Reliability Policy: Best Effort
+        Value: /detections/image_annotated
+      Enabled: true
+  Global Options:
+    Fixed Frame: camera_frame
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera

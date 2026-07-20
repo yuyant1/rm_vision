@@ -1,0 +1,27 @@
+# RoboMaster 装甲板检测 Pipeline 参数配置
+# 启动时通过 launch 文件加载到参数服务器，运行时可在命令行覆盖。
+
+# ── Camera Node ──────────────────────────────────────
+camera_node:
+  ros__parameters:
+    camera_id: 0              # 摄像头设备号（/dev/video0）
+    video_path: ""            # 视频文件路径，非空时优先
+    fps: 30                   # 发布帧率
+    image_width: 640          # 缩放宽度，-1 表示保持原始
+    image_height: 480         # 缩放高度
+
+# ── Detector Node ────────────────────────────────────
+detector_node:
+  ros__parameters:
+    model_path: ""            # 空字符串 = 使用默认路径（phase2 权重）
+    confidence_threshold: 0.5 # 置信度阈值，低于此值不输出
+    device: "cuda"            # cuda / cpu
+    imgsz: 640                # YOLO 推理图像尺寸
+    publish_debug_image: false # 是否在 detector 内部发布调试图像
+
+# ── Visualizer Node ──────────────────────────────────
+visualizer_node:
+  ros__parameters:
+    enable_visualization: true # 是否启用可视化
+    line_thickness: 2          # 检测框线粗细（px）
+    queue_size: 10             # 消息同步队列大小

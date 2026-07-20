@@ -1,0 +1,20 @@
+source: /home/yyr/视频/录屏/录屏 2026-07-14 14-07-52.mp4
+weights: /home/yyr/robomaster_ws/src/rm_vision_phase2/weights/yolov8s_baseline_30_best.pt
+output_video: /home/yyr/robomaster_ws/src/rm_vision_phase2/demo/rm_test_detected.mp4
+frames_processed: 343
+source_fps: 27.990
+elapsed_seconds: 7.628
+average_processing_fps: 44.967
+average_model_inference_ms: 2.713
+confidence_threshold: 0.4
+iou_threshold: 0.7
+class_agnostic_nms: True
+image_size: 640
+device: 0
+screenshots_saved: 7
+detections_by_class:
+  blue_1: 1
+  blue_3: 162
+  blue_4: 9
+  red_1: 25
+  red_4: 5

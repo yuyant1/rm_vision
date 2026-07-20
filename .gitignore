@@ -2,4 +2,7 @@ build/
 install/
 log/
 __pycache__/
-*.pyc
+*.pyc*.mp4
+*.pt
+*.mp4
+*.pt

@@ -1,0 +1,15 @@
+split: val
+images: 3165
+labels: 3165
+empty_labels: 9
+missing_labels: 0
+missing_images: 0
+invalid_rows: 0
+class_0_red_1: 477
+class_1_blue_1: 127
+class_2_red_3: 484
+class_3_blue_3: 215
+class_4_red_4: 2235
+class_5_blue_4: 485
+class_6_red_sentry: 577
+class_7_blue_sentry: 837

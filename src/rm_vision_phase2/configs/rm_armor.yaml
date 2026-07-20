@@ -1,0 +1,13 @@
+path: /home/yyr/Downloads/rm
+
+train: train/images
+val: val/images
+names:
+  0: red_1
+  1: blue_1
+  2: red_3
+  3: blue_3
+  4: red_4
+  5: blue_4
+  6: red_sentry
+  7: blue_sentry
