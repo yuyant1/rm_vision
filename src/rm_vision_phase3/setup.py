@@ -33,6 +33,7 @@ setup(
         'console_scripts': [
             'camera_node = rm_vision_phase3.camera_node:main',
             'detector_node = rm_vision_phase3.detector_node:main',
+            'tracker_node = rm_vision_phase3.tracker_node:main',
             'visualizer_node = rm_vision_phase3.visualizer_node:main',
         ],
     },

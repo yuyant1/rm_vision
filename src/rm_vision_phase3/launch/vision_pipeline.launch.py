@@ -51,6 +51,14 @@ def generate_launch_description():
         "enable_visualization", default_value="true",
         description="是否启用可视化节点"
     )
+    max_lost_arg = DeclareLaunchArgument(
+        "max_lost_frames", default_value="10",
+        description="目标丢失多少帧后删除"
+    )
+    pred_steps_arg = DeclareLaunchArgument(
+        "prediction_steps", default_value="10",
+        description="前向预测步数(提前量)"
+    )
 
     # ── 节点定义 ────────────────────────────────────────
     camera_node = Node(
@@ -77,6 +85,17 @@ def generate_launch_description():
         }],
     )
 
+    tracker_node = Node(
+        package="rm_vision_phase3",
+        executable="tracker_node",
+        name="tracker_node",
+        output="screen",
+        parameters=[default_params, {
+            "max_lost_frames": LaunchConfiguration("max_lost_frames"),
+            "prediction_steps": LaunchConfiguration("prediction_steps"),
+        }],
+    )
+
     visualizer_node = Node(
         package="rm_vision_phase3",
         executable="visualizer_node",
@@ -98,8 +117,11 @@ def generate_launch_description():
         conf_arg,
         device_arg,
         enable_viz_arg,
+        max_lost_arg,
+        pred_steps_arg,
         camera_node,
         detector_node,
+        tracker_node,
         visualizer_node,
-        LogInfo(msg="Pipeline 启动完毕: camera → detector → visualizer → rviz2"),
+        LogInfo(msg="Pipeline 启动完毕: camera → detector → tracker → visualizer"),
     ])

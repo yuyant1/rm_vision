@@ -25,3 +25,10 @@ visualizer_node:
     enable_visualization: true # 是否启用可视化
     line_thickness: 2          # 检测框线粗细（px）
     queue_size: 10             # 消息同步队列大小
+
+# ── Tracker Node ─────────────────────────────────────
+tracker_node:
+  ros__parameters:
+    max_lost_frames: 10        # 目标丢失多少帧后删除
+    prediction_steps: 10       # 前向预测步数(提前量)
+    iou_threshold: 0.3         # 匈牙利关联 IoU 阈值

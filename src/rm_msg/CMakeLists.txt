@@ -27,6 +27,8 @@ set(msg_files
   "msg/Target.msg"
   "msg/BBox2D.msg"
   "msg/DetectionArray.msg"
+  "msg/TrackedBBox.msg"
+  "msg/TrackedArray.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}

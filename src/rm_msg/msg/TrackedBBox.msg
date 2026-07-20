@@ -1,0 +1,12 @@
+int32 tracking_id
+int32 class_id
+string class_name
+float64 x1
+float64 y1
+float64 x2
+float64 y2
+float64 confidence
+float64 vx
+float64 vy
+float64 predicted_x
+float64 predicted_y
